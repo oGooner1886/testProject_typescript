@@ -1,29 +1,27 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import "app/styles/index.scss";
+
 import { Theme } from "app/providers/ThemeProvider";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Sidebar } from "./Sidebar";
-
-const meta: Meta<typeof Sidebar> = {
-  title: "widget/Sidebar",
-  component: Sidebar,
+import { ThemeSwitcher } from "./ThemeSwitcher";
+const meta: Meta<typeof ThemeSwitcher> = {
+  title: "shared/ThemeSwitcher",
+  component: ThemeSwitcher,
   parameters: {
     // layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {},
+  args: {},
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Sidebar>;
+type Story = StoryObj<typeof ThemeSwitcher>;
 
 export const Light: Story = {
   args: {},
 };
-
 export const Dark: Story = {
   args: {},
   decorators: [ThemeDecorator(Theme.DARK)],
 };
-
