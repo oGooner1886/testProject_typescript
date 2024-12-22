@@ -3,20 +3,17 @@
 @import "themes/light.scss";
 @import "themes/dark.scss";
 
-.app {
-  font: var(--font-m);
 
+.app {
+  min-height: 100vh;
   background: var(--bg-color);
   color: var(--primary-color);
-
-  min-height: 100vh;
-  
+  font: var(--font-m);
 }
-.content-page{
+.content-page {
   display: flex;
-  
 }
-.page-wrapper{
+.page-wrapper {
   flex-grow: 1;
   padding: 20px;
 }
